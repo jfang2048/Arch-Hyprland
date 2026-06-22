@@ -44,6 +44,7 @@
 	
 	"modules-right": [
 		"tray",
+		"memory",
 		"network#speed",
 		"custom/separator#dot-line",
 		"group/laptop",
