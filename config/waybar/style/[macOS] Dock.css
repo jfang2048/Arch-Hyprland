@@ -1,0 +1,222 @@
+/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
+/* macOS Dock Style — Floating glass pill, bottom centered, full layout */
+
+@define-color bar-bg rgba(0, 0, 0, 0);
+@define-color dock-bg rgba(40, 40, 45, 0.55);
+@define-color dock-border rgba(120, 120, 128, 0.30);
+@define-color dock-shadow rgba(0, 0, 0, 0.45);
+@define-color text-color #f5f5f7;
+@define-color text-dim rgba(245, 245, 247, 0.65);
+@define-color accent #5ac8fa;
+@define-color active-bg rgba(255, 255, 255, 0.15);
+@define-color hover-bg rgba(255, 255, 255, 0.08);
+@define-color critical #ff453a;
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: 500;
+    min-height: 0;
+    font-size: 13px;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+    background: @bar-bg;
+    color: @text-color;
+}
+
+tooltip {
+    background: rgba(28, 28, 30, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    color: @text-color;
+}
+
+tooltip label {
+    color: @text-color;
+    padding: 8px 12px;
+}
+
+/* Floating glass dock pill */
+window#waybar > box {
+    background: @dock-bg;
+    border: 1px solid @dock-border;
+    border-radius: 22px;
+    box-shadow:
+        0 8px 24px @dock-shadow,
+        inset 0 -1px 0 rgba(0, 0, 0, 0.20);
+    padding: 4px 6px;
+    margin: 0px;
+}
+
+/* All modules — transparent bg, hover glow */
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#network,
+#network#speed,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar button,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-nightlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker {
+    color: @text-color;
+    background: transparent;
+    padding: 0 8px;
+    margin: 2px 1px;
+    border-radius: 12px;
+    transition: all 0.15s ease-in-out;
+}
+
+/* Hover glow for modules */
+#backlight:hover,
+#battery:hover,
+#bluetooth:hover,
+#clock:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover,
+#temperature:hover,
+#custom-cava_mviz:hover,
+#custom-playerctl:hover,
+#custom-menu:hover,
+#custom-swaync:hover,
+#custom-nightlight:hover,
+#custom-power:hover,
+#custom-hint:hover,
+#custom-dot_update:hover {
+    background: @hover-bg;
+    color: @text-color;
+}
+
+/* Workspaces — dot indicators */
+#workspaces {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 999px;
+    padding: 2px 4px;
+    margin: 0 4px;
+}
+
+#workspaces button {
+    font-size: 9px;
+    color: @text-dim;
+    padding: 0 6px;
+    border-radius: 999px;
+    margin: 0 1px;
+    background: transparent;
+    transition: 250ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+#workspaces button:hover {
+    color: @text-color;
+    background: @hover-bg;
+}
+
+#workspaces button.active {
+    color: @text-color;
+    background: @active-bg;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+#workspaces button.urgent {
+    color: @critical;
+}
+
+/* Clock */
+#clock {
+    color: @text-color;
+    font-weight: 600;
+}
+
+/* Menu */
+#custom-menu {
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+/* Cava viz */
+#custom-cava_mviz {
+    padding: 0 6px;
+}
+
+/* Playerctl */
+#custom-playerctl {
+    padding: 0 6px;
+}
+
+/* Audio */
+#pulseaudio.muted {
+    color: @critical;
+}
+
+/* Network states */
+#network.disconnected,
+#network#speed.disconnected {
+    color: @critical;
+}
+
+/* Battery */
+#battery.warning:not(.charging) {
+    color: #ffbe55;
+}
+
+#battery.critical:not(.charging) {
+    color: @critical;
+}
+
+/* Temperature */
+#temperature.critical {
+    color: @critical;
+}
+
+/* Window title */
+#window {
+    padding: 0 10px;
+    color: @text-dim;
+}
+
+/* Hint */
+#custom-hint {
+    font-size: 11px;
+    color: @text-dim;
+}

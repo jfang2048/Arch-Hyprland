@@ -1,0 +1,35 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### macOS Dock - Bottom Clean ### //
+{
+	"include": [
+	  "$HOME/.config/waybar/Modules",
+	  "$HOME/.config/waybar/ModulesWorkspaces",
+	  "$HOME/.config/waybar/ModulesCustom",
+	  "$HOME/.config/waybar/ModulesGroups",
+	  "$HOME/.config/waybar/UserModules",
+	  ],
+	"layer": "top",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "bottom",
+	"spacing": 4,
+	"fixed-center": true,
+	"ipc": true,
+	"margin-bottom": 8,
+	"margin-left": 160,
+	"margin-right": 160,
+
+	"modules-left": [],
+
+	"modules-center": [
+		"memory",
+		"temperature",
+		"clock",
+		"network#speed",
+		"bluetooth",
+		"group/laptop",
+		],
+
+	"modules-right": [],
+}
