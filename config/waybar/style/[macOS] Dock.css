@@ -162,10 +162,12 @@ window#waybar > box {
     color: @critical;
 }
 
-/* Clock */
+/* Clock — larger, bolder, brighter */
 #clock {
-    color: @text-color;
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 0 12px;
 }
 
 /* Menu */
