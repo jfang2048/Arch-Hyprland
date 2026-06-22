@@ -25,8 +25,8 @@ Based on **JaKooLit's Hyprland Dots v2.3.x** with customizations:
 | Wallust | 3.5.2 |
 | Btop | 1.4.7 |
 | Cava | 0.10.7 |
-| Nwg-look | 1.1.1 |
-| Thunar | 4.20.8 |
+| Display | eDP-2 2560x1600@165Hz |
+| GPU | NVIDIA RTX 3060 + AMD Radeon 680M |
 
 ## 🚀 Quick Install
 
@@ -114,14 +114,18 @@ wallpapers/         # Wallpaper collection
 
 ## 🎨 Customization Highlights
 
-- **Bottom macOS Dock** — Floating glass pill with semi-transparent background
+- **Bottom macOS Dock** — Edge-to-edge dark glass bar with tight compact spacing
   - Config: `config/waybar/configs/[BOT] Default Laptop`
   - Style: `config/waybar/style/[macOS] Dock.css`
+  - Minimal rounded corners, small font, snug padding
+- **Theme** — Flat-Remix-GTK-Blue-Dark
+- **Cursor** — Bibata-Modern-Ice
 - **Weather** — Uses Open-Meteo (free, no API key) via Python
   - Location auto-detected by IP, or set manually in `UserScripts/Weather.py`
 - **Wallust** — Auto-generates color scheme from wallpaper
 - **Notifications** — Swaync at bottom, styled to match
 - **Audio** — PipeWire + WirePlumber + pavucontrol
+- **SSH Keys** — Generated on first boot by initial-boot.sh
 
 ## 🔗 Links
 

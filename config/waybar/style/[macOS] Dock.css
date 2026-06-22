@@ -18,7 +18,7 @@
     font-family: "JetBrainsMono Nerd Font";
     font-weight: 500;
     min-height: 0;
-    font-size: 13px;
+    font-size: 11px;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
@@ -43,11 +43,11 @@ tooltip label {
 window#waybar > box {
     background: @dock-bg;
     border: 1px solid @dock-border;
-    border-radius: 22px;
+    border-radius: 4px;
     box-shadow:
         0 8px 24px @dock-shadow,
         inset 0 -1px 0 rgba(0, 0, 0, 0.20);
-    padding: 4px 6px;
+    padding: 1px 2px;
     margin: 0px;
 }
 
@@ -102,9 +102,9 @@ window#waybar > box {
 #custom-hyprpicker {
     color: @text-color;
     background: transparent;
-    padding: 0 8px;
-    margin: 2px 1px;
-    border-radius: 12px;
+    padding: 0 4px;
+    margin: 0px 0px;
+    border-radius: 2px;
     transition: all 0.15s ease-in-out;
 }
 
@@ -133,8 +133,8 @@ window#waybar > box {
 #workspaces {
     background: rgba(255, 255, 255, 0.04);
     border-radius: 999px;
-    padding: 2px 4px;
-    margin: 0 4px;
+    padding: 1px 2px;
+    margin: 0 2px;
 }
 
 #workspaces button {
