@@ -1,6 +1,6 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 
-// ### DEFAULT Laptop  - Bottom ### //
+// ### DEFAULT Laptop  - Top ### //
 {
 	"include": [
 	  "$HOME/.config/waybar/Modules",
@@ -13,7 +13,7 @@
 	//"mode": "dock",
 	"exclusive": true,
 	"passthrough": false,
-	"position": "bottom",
+	"position": "top",
 	"spacing": 3,
 	"fixed-center": true,
 	"ipc": true,

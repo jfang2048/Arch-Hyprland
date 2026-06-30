@@ -52,8 +52,6 @@ window#waybar > box {
 }
 
 /* All modules — transparent bg, hover glow */
-#backlight,
-#backlight-slider,
 #battery,
 #bluetooth,
 #clock,
@@ -75,7 +73,6 @@ window#waybar > box {
 #window,
 #wireplumber,
 #workspaces,
-#custom-backlight,
 #custom-nightlight,
 #custom-browser,
 #custom-cava_mviz,
@@ -109,7 +106,6 @@ window#waybar > box {
 }
 
 /* Hover glow for modules */
-#backlight:hover,
 #battery:hover,
 #bluetooth:hover,
 #clock:hover,
