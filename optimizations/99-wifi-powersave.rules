@@ -1,0 +1,2 @@
+# Disable WiFi power saving (reduces latency)
+ACTION=="add", SUBSYSTEM=="net", KERNEL=="wl*", RUN+="/usr/bin/iw dev $name set power_save off"

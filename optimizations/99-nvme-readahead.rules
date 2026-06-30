@@ -1,0 +1,2 @@
+# Increase NVMe read-ahead for sequential performance
+ACTION=="add", KERNEL=="nvme[0-9]*n[0-9]*", ATTR{queue/read_ahead_kb}="4096"

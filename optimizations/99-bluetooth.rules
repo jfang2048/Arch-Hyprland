@@ -1,0 +1,2 @@
+# Disable BT USB autosuspend (reduces reconnect issues)
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="b85c", ATTR{power/control}="on"
